@@ -11,6 +11,12 @@ public class Compte {
 		this.soldeCompte = soldeCompte;
 	}
 
+	public String toString() {
+		   return "Compte numero " + this.numCompte +
+			  
+			  ", montant " + this.soldeCompte;
+		}
+	
 	public int getNumCompte() {
 		return numCompte;
 	}
