@@ -9,6 +9,7 @@ public class TestBanque {
 		System.out.println(compte.toString());
 		//Il faut des getteurs dans la classe Compte pour pouvoir afficher les informations
 		//ou créer une methode toString() dans la classe qui permet d'afficher les informations que l'on souhaite 
+		//exo tp6
 
 	}
 
