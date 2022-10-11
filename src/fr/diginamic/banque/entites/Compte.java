@@ -3,7 +3,7 @@ package fr.diginamic.banque.entites;
 public class Compte {
 	
 	private int numCompte;
-	private int soldeCompte;
+	private double soldeCompte;
 	
 	public Compte(int numCompte,int soldeCompte ) {
 		// TODO Auto-generated constructor stub
@@ -12,9 +12,9 @@ public class Compte {
 	}
 
 	public String toString() {
-		   return "Compte numero " + this.numCompte +
+		   return "Compte numero : " + this.numCompte +
 			  
-			  ", montant " + this.soldeCompte;
+			  " | montant : " + this.soldeCompte;
 		}
 	
 	public int getNumCompte() {
@@ -24,7 +24,7 @@ public class Compte {
 	public void setNumCompte(int numCompte) {
 		this.numCompte = numCompte;
 	}
-	public int getsoldeCompte() {
+	public double getsoldeCompte() {
 		return soldeCompte;
 	}
 
