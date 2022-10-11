@@ -4,9 +4,9 @@ import entities.AdressePostale;
 
 public class Personne {
 
-	public String name;
-	public String firstName;
-	public AdressePostale adresse;
+	private String name;
+	private String firstName;
+	private AdressePostale adresse;
 
 	public Personne(String name, String firstName, AdressePostale adresse) {
 		this.name = name.toUpperCase();
