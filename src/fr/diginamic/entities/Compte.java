@@ -1,4 +1,4 @@
-package fr.diginamic.banque.entites;
+package fr.diginamic.entities;
 
 public class Compte {
 	

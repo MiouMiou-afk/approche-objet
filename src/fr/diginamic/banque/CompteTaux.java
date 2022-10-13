@@ -1,4 +1,6 @@
-package fr.diginamic.banque.entites;
+package fr.diginamic.banque;
+
+import fr.diginamic.banque.entites.Compte;
 
 public class CompteTaux extends Compte {
 
@@ -9,7 +11,7 @@ public class CompteTaux extends Compte {
         this.tauxRemuneration = tauxRemuneration;
 }
 	public String toString() {
-		return super.toString() + " et son taux de rémuneration est de : " + tauxRemuneration + " ";
+		return super.toString() + " et son taux de rémuneration est de : " + tauxRemuneration + "% ";
 		
 	}
 
