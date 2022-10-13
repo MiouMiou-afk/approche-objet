@@ -12,9 +12,9 @@ public class Compte {
 	}
 
 	public String toString() {
-		   return "Compte numero " + this.numCompte +
+		   return "Compte numero : " + this.numCompte +
 			  
-			  ", montant " + this.soldeCompte;
+			  ", montant : " + this.soldeCompte;
 		}
 	
 	public int getNumCompte() {

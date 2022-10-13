@@ -1,20 +1,21 @@
 package fr.diginamic.maison;
 
-public class Maison{
- 
+public class Maison {
+
 	private Piece[] Tabpiece = new Piece[1];
 	private Piece piece;
-	
-	public  Maison(Piece   piece) {
-		this.Tabpiece[0]= piece;
+	private String pieceInHouse;
+
+	public Maison(Piece piece) {
+		this.Tabpiece[0] = piece;
 		this.piece = piece;
-		
+
 	}
-	
+
 	public void ajouterPiece(Piece piece) {
 
 		if (piece == null) {
-			System.out.println("Veuillez renseigner une piece");
+			System.out.println("La maison n'a pas de pièce");
 		} else {
 			if ((piece.getNumEtage() >= 0 && piece.getSuperficie() > 0)) {
 				Piece[] newPiece = new Piece[this.Tabpiece.length + 1];
@@ -24,15 +25,42 @@ public class Maison{
 				newPiece[newPiece.length - 1] = piece;
 
 				this.Tabpiece = newPiece;
-				System.out.println("La " + piece.getName() + " a bien été ajouté dans la maison");
+				System.out.println("La " + piece.getName() + " a bien été ajouté à la maison");
 			} else {
-				System.out.println("on peut pas mettre une surface egale a zero ou une piece null ");
-				System.out.println(
-						"Il y a une erreur lors de l'ajout veuillez verifier les informations suivantes : Etage => "
-								+ piece.getNumEtage() + " Superficie => " + piece.getSuperficie());
+
+				System.out.println("ERREUR lors de l'ajout :  nom : " + piece.getName() + "  étage : "
+						+ piece.getNumEtage() + " superficie : " + piece.getSuperficie());
 			}
 		}
-		
+	}
+
+	public void surfaceGlobalTypePiece(String TypePiece) {
+
+		double superficieTotal = 0;
+		String nameString = null;
+
+		for (int i = 0; i < this.Tabpiece.length; i++) {
+			nameString = Tabpiece[i].getName();
+
+			if (nameString.equals(TypePiece)) {
+				superficieTotal = superficieTotal + this.Tabpiece[i].getSuperficie();
+			}
+		}
+		System.out.println(" La surface de(s) " + TypePiece + " (s)est de : " + superficieTotal);
+
+	}
+
+	public void nombreTypePiece(String TypePiece) {
+		int nbPiece = 0;
+		String nameString = null;
+		for (int i = 0; i < Tabpiece.length; i++) {
+			nameString = Tabpiece[i].getName();
+
+			if (nameString.equals(TypePiece)) {
+				nbPiece++;
+			}
+		}
+		System.out.println(" Nombre de " + TypePiece + " est de :" + nbPiece);
 	}
 
 	public Piece[] getTabpiece() {
@@ -50,6 +78,13 @@ public class Maison{
 	public void setPiece(Piece piece) {
 		this.piece = piece;
 	}
-	
+
+	public String getPieceInHouse() {
+		return pieceInHouse;
+	}
+
+	public void setPieceInHouse(String pieceInHouse) {
+		this.pieceInHouse = pieceInHouse;
+	}
 
 }

@@ -6,7 +6,7 @@ public class Chambre extends Piece {
 	int superficie;
  
 	public Chambre(int superficie, int numEtage, String string) {
-		super(superficie, numEtage, "chambre");
+		super(superficie, numEtage, "Chambre");
 		// TODO Auto-generated constructor stub
 	}
 

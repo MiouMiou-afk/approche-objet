@@ -20,7 +20,7 @@ public class Pigiste extends Intervenant {
 	}
 	
 	public void afficheDonnees() {
-		System.out.println("Le Pigiste : "+ this.getFirstName()+" "+this.getLastName()+" salaire "+this.getSalaire()+" status Pigiste");
+		System.out.println("Le Pigiste : "+ this.getFirstName()+" "+this.getLastName()+" salaire "+this.getSalaire()+" status : Pigiste");
 	}
 
 }

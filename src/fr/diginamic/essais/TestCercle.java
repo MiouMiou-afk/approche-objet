@@ -1,11 +1,12 @@
 package fr.diginamic.essais;
 
 import fr.diginamic.entities.Cercle;
+import utils.CercleFactory;
 
 public class TestCercle {
 
 	public static void main(String[] args) {
-		Cercle cercle1 = new Cercle(4);
+		CercleFactory cercle1 = new CercleFactory(4);
 		Cercle cercle2 = new Cercle(7);
 		
 		double perimetre1 = cercle1.perimetre();

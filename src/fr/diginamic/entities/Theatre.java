@@ -10,13 +10,13 @@ public class Theatre {
 	
 	public Theatre(String nom,int capaciterMax,int inscrits) {
 		// TODO Auto-generated constructor stub
-		this.capaciterMax=capaciterMax;
-		this.nom=nom;
-		this.inscrits=inscrits;
+		this.capaciterMax = capaciterMax;
+		this.nom = nom;
+		this.inscrits = inscrits;
 	}
 	
 	public void inscription(float prix,int inscrits) {
-		if(inscrits>=this.capaciterMax) {
+		if(inscrits >= this.capaciterMax) {
 			System.out.println("Capacité max atteinte !");
 		}else {
 			this.inscrits=inscrits;

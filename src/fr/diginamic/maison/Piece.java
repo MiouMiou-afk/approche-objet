@@ -5,6 +5,7 @@ public class Piece {
 	int superficie;
 	int numEtage;
 	String name;
+
 	
 	public Piece(int superficie, int numEtage, String name) {
 		this.superficie = superficie;
@@ -35,6 +36,8 @@ public class Piece {
 	public void setNumEtage(int numEtage) {
 		this.numEtage = numEtage;
 	}
+
+
 
 	
 	

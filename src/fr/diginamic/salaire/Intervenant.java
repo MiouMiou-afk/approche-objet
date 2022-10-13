@@ -9,7 +9,6 @@ public abstract class Intervenant {
 	
 	
 	public Intervenant(String firstName, String lastName) {
-		super();
 		this.firstName = firstName;
 		this.lastName = lastName;
 	 
