@@ -10,7 +10,7 @@ public class TestListeString {
 		// TODO Auto-generated method stub
 		ArrayList<String> liste = new ArrayList<String>(
 				Arrays.asList("Nice", "Carcassonne", "Narbonne", "Lyon", "Foix", "Pau", "Marseille", "Tarbe"));
-		int iPosition=0;
+		int position=0;
 		String maxString = "";
 		int longeurString = 0;
 		
@@ -34,10 +34,12 @@ public class TestListeString {
 			}
 			
 			element = element.toUpperCase();
-			liste.set(iPosition, element);
+			liste.set(position, element);
 			System.out.println(element);
 		}
 	}
+	
+	
 
 
 

@@ -1,7 +1,5 @@
 package listes;
 
-
-
 public class Ville {
 
 	String nom;
@@ -11,8 +9,6 @@ public class Ville {
 		this.nom = nom;
 		this.nbHabitant = nbHabitant;
 	}
-
-	
 
 	public String getNom() {
 		return nom;

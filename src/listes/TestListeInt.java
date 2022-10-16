@@ -19,7 +19,7 @@ public class TestListeInt {
 		listeInt.add(8);
 		listeInt.add(5);
 
-		for (Iterator iterator = listeInt.iterator(); iterator.hasNext();) {
+		for (Iterator<Integer> iterator = listeInt.iterator(); iterator.hasNext();) {
 			Integer string = (Integer) iterator.next();
 			System.out.println(string);
 		}
@@ -27,19 +27,15 @@ public class TestListeInt {
 		System.out.println("Taille de la liste : " + listeInt.size());
 
 		int maxValue = 0;
-
+		int minValue = 0;
 		for (Integer integer : listeInt) {
-			if (integer > maxValue)
+			if (integer > maxValue) {
 				maxValue = integer;
+			}if (integer < minValue) {
+				minValue = integer;
+			}
 		}
 		System.out.println("La valeur max est  " + maxValue);
-
-		int minValue = 0;
-
-		for (Integer integer : listeInt) {
-			if (integer < minValue)
-				minValue = integer;
-		}
 		System.out.println("La valeur min est  " + minValue);
 
 		int position = 0;
@@ -49,10 +45,8 @@ public class TestListeInt {
 				integer2 = Math.abs(integer2);
 				posi = position;
 				listeInt.set(posi, integer2);
-
 			}
 			position++;
-
 			System.out.println(listeInt);
 		}
 

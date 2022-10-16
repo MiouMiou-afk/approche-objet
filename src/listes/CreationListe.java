@@ -11,8 +11,10 @@ public class CreationListe {
 		ArrayList<Integer> liste = new ArrayList<Integer>();
 		for(int i=0; i<100; i++) {
 			liste.add(i);
+			System.out.println(liste.get(i));
 		}
 		System.out.println(liste.size());
+		
 	}
 
 }

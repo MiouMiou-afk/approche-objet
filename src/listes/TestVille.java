@@ -17,8 +17,8 @@ public class TestVille {
 		int nbVilleHabMax = 0;
 		int nbVilleHbPetit = 100000;
 		String villeMinHab = "";
-		int indexSup = 0;
-		int iPosition = 0;
+		int removeIndex = 0;
+		int position = 0;
 
 		Iterator<Ville> iterator = liste.iterator();
 		while (iterator.hasNext()) {
@@ -33,13 +33,13 @@ public class TestVille {
 			if (ville.getNbHabitant() < nbVilleHbPetit) {
 				nbVilleHbPetit = ville.getNbHabitant();
 				villeMinHab = ville.getNom();
-				indexSup = iPosition;
+				removeIndex = position;
 
 			}
-			iPosition++;
+			position++;
 		}
 
-		liste.remove(indexSup);
+		liste.remove(removeIndex);
 
 		for (Ville element : liste) {
 			System.out.println(element.getNom() + " =>  " + element.getNbHabitant() + " habitants");
@@ -52,12 +52,11 @@ public class TestVille {
 
 			Ville ville = iterator1.next();
 			if (ville.getNbHabitant() > nbVilleHbPetit) {
-			String updateNameString =	ville.getNom().toUpperCase();
-			ville.setNom(updateNameString);
+				String updateNameString = ville.getNom().toUpperCase();
+				ville.setNom(updateNameString);
 			}
 			System.out.println(ville.getNom());
 		}
-		
 
 	}
 
