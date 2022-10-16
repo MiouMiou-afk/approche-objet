@@ -52,12 +52,12 @@ public class TestVille {
 
 			Ville ville = iterator1.next();
 			if (ville.getNbHabitant() > nbVilleHbPetit) {
-				ville.getNom().toUpperCase();
-				System.out.println(ville.getNom().toUpperCase());
-
+			String updateNameString =	ville.getNom().toUpperCase();
+			ville.setNom(updateNameString);
 			}
-
+			System.out.println(ville.getNom());
 		}
+		
 
 	}
 
