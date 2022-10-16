@@ -4,6 +4,7 @@ import utils.CercleFactory;
 
 public class Cercle extends CercleFactory {
 	double rayon;
+	
 	public Cercle(double rayon) {
 		super(rayon);
 	}
