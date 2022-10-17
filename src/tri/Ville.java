@@ -1,8 +1,6 @@
 package tri;
 
-
-
-public class Ville implements Comparable<Ville> {
+public class Ville {
 
 	String nom;
 	Integer nbHabitant;
@@ -10,6 +8,12 @@ public class Ville implements Comparable<Ville> {
 	public Ville(String nom, Integer nbHabitant) {
 		this.nom = nom;
 		this.nbHabitant = nbHabitant;
+	}
+
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		return this.nom + "=>" + this.nbHabitant;
 	}
 
 	public String getNom() {
@@ -28,19 +32,8 @@ public class Ville implements Comparable<Ville> {
 		this.nbHabitant = nbHabitant;
 	}
 
-	//permet d'utiliser Collections.sort(liste) pour trier une listfe d'objet
-	//Il faut imperativement implementer CompareTo dans la classe ou l'on souhaite trier un tableau d'objet
-	
-	@Override
-	public int compareTo(Ville o) {
-		// retourne la list selon le nombre d'habitant
-		if(this.nbHabitant>o.getNbHabitant()) {
-			return 1;
-		}if(this.nbHabitant<o.getNbHabitant()) {
-			return -1;
-		}
-		return 0;
-		//retourne la liste selon l'ordre alphabetique
-//		return this.nom.compareTo(o.getNom());
-	}
+	// permet d'utiliser Collections.sort(liste) pour trier une listfe d'objet
+	// Il faut imperativement implementer CompareTo dans la classe ou l'on souhaite
+	// trier un tableau d'objet
+
 }

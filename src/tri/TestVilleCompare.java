@@ -32,17 +32,19 @@ public class TestVilleCompare {
 		
 		
 		///tri en implementant le comparator
-			System.out.println("Tri par nombre d'habitant ");
+			System.out.println("Tri par nombre d'habitant \n ");
 
 		Collections.sort(liste, new ComparatorHabitant());
 		for (Ville element : liste) {
  			System.out.println(element.getNom()+" => "+ element.getNbHabitant()+" habitants;");
  		}
-		
-		System.out.println("Tri par nom de ville ");
+		System.out.println(" \n ");
+		System.out.println("Tri par nom de ville \n ");
 		Collections.sort(liste, new ComparatorNom());
 		for (Ville element : liste) {
  			System.out.println(element.getNom()+" => "+ element.getNbHabitant()+" habitants;");
+ 			System.out.println(element.toString());
+
  		}
 		
 	}
