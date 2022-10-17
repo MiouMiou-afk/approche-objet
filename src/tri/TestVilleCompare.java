@@ -5,8 +5,6 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
-import tri.Ville;
-
 public class TestVilleCompare {
 	
 	
@@ -33,7 +31,7 @@ public class TestVilleCompare {
 		
 		
 		
-		///tri en impklementant le comparator
+		///tri en implementant le comparator
 			System.out.println("Tri par nombre d'habitant ");
 
 		Collections.sort(liste, new ComparatorHabitant());
