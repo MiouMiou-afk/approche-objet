@@ -37,7 +37,7 @@ public class MapVilles {
 		mapVilles.put(v7.getNom(), v7);
 		mapVilles.put(v8.getNom(), v8);
 
-		int nbMinHab = 1000000;
+		int nbMinHab = Integer.MAX_VALUE;
 		String indexSup = "";
 		
 		for (String cle : mapVilles.keySet()) {
