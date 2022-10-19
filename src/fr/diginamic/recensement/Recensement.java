@@ -1,4 +1,4 @@
-package fichier;
+package fr.diginamic.recensement;
 
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
@@ -8,13 +8,23 @@ import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 
-public class LectureFichier {
+import fichier.Ville;
 
-	public static void main(String[] args) throws IOException {
-		// TODO Auto-generated method stub
+public  class Recensement  {
+
+	private Path pathFile;
+	private List<Ville> ville = new ArrayList<Ville>();
+	
+	
+	public Recensement() throws IOException {
+		this.getListVille();
+	}
+
+	public void getListVille() throws IOException {
+
 		ArrayList<Ville> ville = new ArrayList<Ville>();
 
-		Path pathFile = Paths.get("C:/Users/magag/Downloads/recensement.csv");
+		this.pathFile = Paths.get("C:/Users/magag/Downloads/recensement.csv");
 		List<String> lines = Files.readAllLines(pathFile, StandardCharsets.UTF_8);
 		for (int i = 0; i < lines.size(); i++) {
 			String[] line = lines.get(i).split(";");
@@ -30,17 +40,24 @@ public class LectureFichier {
 			}
 		}
 
-		// villes de moins de 25 000
-		for (int i = 0; i < ville.size(); i++) {
-			if (ville.get(i).getPopTotal() < 25000) {
-				ville.remove(i);
-			}
-
-		}
-
-		System.out.println(ville.toString());
-		System.out.println(ville.size());
-
 	}
+
+	public Path getPathFile() {
+		return pathFile;
+	}
+
+	public void setPathFile(Path pathFile) {
+		this.pathFile = pathFile;
+	}
+
+	public List<Ville> getVille() {
+		return ville;
+	}
+
+	public void setVille(List<Ville> ville) {
+		this.ville = ville;
+	}
+
+	
 
 }
