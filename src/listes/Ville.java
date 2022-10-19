@@ -9,6 +9,20 @@ public class Ville {
 		this.nom = nom;
 		this.nbHabitant = nbHabitant;
 	}
+	
+	@Override
+	public boolean equals(Object obj){
+	  
+	  if(obj == null) return false;
+	  
+	  if(obj instanceof Ville && this == obj) return true;
+	  
+	  Ville ville = (Ville)obj;
+	  
+	  if(nbHabitant != ville.nbHabitant) return false;
+	  if(nom != null && !nom.equalsIgnoreCase(ville.nom)) return false;
+	  return true;
+	}
 
 	public String getNom() {
 		return nom;

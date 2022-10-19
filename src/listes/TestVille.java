@@ -58,11 +58,20 @@ public class TestVille {
 			}
 			System.out.println(ville.getNom());
 		}
-		
-	
- 
-		
-	
+
+		Ville student1 = new Ville("Aix", 22);
+		Ville student2 = new Ville("Aix", 22);
+		System.out.println(student1.equals(student2)); // true
+
+		Ville student3 = new Ville("Aix", 22);
+		Ville student4 = new Ville("Aix", 3);
+		System.out.println(student3.equals(student4)); // false
+
+//		Ville student1 = new Ville("Aix", 22);
+//		Ville student2 = new Ville("Aix", 3);
+
+		System.out.println(student1 == student2);
+
 	}
 
 }
