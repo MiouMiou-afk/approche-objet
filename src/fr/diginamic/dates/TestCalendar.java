@@ -11,18 +11,17 @@ public class TestCalendar {
 
 
 		Calendar calendar = Calendar.getInstance();
-		calendar.set(2016, 4, 19, 23, 59, 30);
+		//calendar.set(2016, 4, 19, 23, 59, 30);
 		Date date2 = calendar.getTime();
 		System.out.println(date2);
         ///formatage des dates en mode FR par exemple
-		SimpleDateFormat formateur = new SimpleDateFormat("EEEEE dd MMMMM yyyy h:m:s", Locale.FRANCE);
-		System.out.println(formateur.format(new Date()));
+		SimpleDateFormat formateur = new SimpleDateFormat("EEEEE dd MMMMM yyyy ", Locale.FRANCE);
 		System.out.println(formateur.format(date2));
-		SimpleDateFormat formateur1 = new SimpleDateFormat("EEEEE dd MMMMM yyyy h:m:s", Locale.GERMAN);
+		SimpleDateFormat formateur1 = new SimpleDateFormat("EEEEE dd MMMMM yyyy ", Locale.GERMANY);
 		System.out.println(formateur1.format(date2));
-		SimpleDateFormat formateur2 = new SimpleDateFormat("EEEEE dd MMMMM yyyy h:m:s", Locale.CHINA);
+		SimpleDateFormat formateur2 = new SimpleDateFormat("EEEEE dd MMMMM yyyy", Locale.CHINA);
 		System.out.println(formateur2.format(date2));
-		SimpleDateFormat formateur3 = new SimpleDateFormat("EEEEE dd MMMMM yyyy h:m:s", Locale.US);
+		SimpleDateFormat formateur3 = new SimpleDateFormat("EEEEE dd MMMMM yyyy", new Locale("ru", "RU"));
 		System.out.println(formateur3.format(date2));
 	}
 

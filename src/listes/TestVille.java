@@ -59,18 +59,17 @@ public class TestVille {
 			System.out.println(ville.getNom());
 		}
 
-		Ville student1 = new Ville("Aix", 22);
-		Ville student2 = new Ville("Aix", 22);
-		System.out.println(student1.equals(student2)); // true
+		Ville ville1 = new Ville("Aix", 22);
+		Ville ville2 = new Ville("Aix", 22);
+		System.out.println(ville1.equals(ville2)); // true
+		System.out.println(ville1 == ville2);//false attention a l'utilisation de "==" marche pour les primitifs mais pas stable pour les objets
+		// == compare les adresses mémoire, ici false car deux memoires differentes 
 
-		Ville student3 = new Ville("Aix", 22);
-		Ville student4 = new Ville("Aix", 3);
-		System.out.println(student3.equals(student4)); // false
+		Ville ville3 = new Ville("Aix", 22);
+		Ville ville4 = new Ville("Aix", 3);
+		System.out.println(ville3.equals(ville4)); // false car le deuxième paramètre est diffèrent 
+		
 
-//		Ville student1 = new Ville("Aix", 22);
-//		Ville student2 = new Ville("Aix", 3);
-
-		System.out.println(student1 == student2);
 
 	}
 
